@@ -6,10 +6,10 @@ $(function(){
 	// Text Editor
 	//----------------------
 	tinymce.init({
-					selector: "textarea",
-					menubar: false,
-					toolbar: false,
-					footer:false
+		selector: "textarea",
+		menubar: false,
+		toolbar: false,
+		footer:false
    });
 	 
 	// on / off fx
@@ -30,9 +30,8 @@ $(function(){
 	// Add loading to submit buttons
 	//----------------------
 	$("form").submit(function() {
-     //$("button[type=submit]").replaceWith('<img src="../assets/imgs/ajax-loader.gif"> Loading...');
-		 $('.js-submit-btn-default').hide();
-		 $('.js-submit-btn-loading').show();
+    	$('.js-submit-btn-default').hide();
+		$('.js-submit-btn-loading').show();
   });
 	
 	

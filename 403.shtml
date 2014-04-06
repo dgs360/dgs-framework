@@ -11,10 +11,10 @@
     <meta name="ICBM" content="">
     
     <!-- CSS -->
-    <link rel="shortcut icon" type="image/gif" href="http://www.mafavis.pt/assets/icons/animated_favicon.gif"></link>
-    <link href="http://www.mafavis.pt/css/bootstrap.min.css" rel="stylesheet">
-    <link href="http://www.mafavis.pt/css/plugins/font-awesome.min.css" rel="stylesheet">
-    <link href="http://www.mafavis.pt/css/layout.min.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/gif" href="http://www.domain.com/assets/icons/animated_favicon.gif"></link>
+    <link href="http://www.domain.com/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://www.domain.com/css/plugins/font-awesome.min.css" rel="stylesheet">
+    <link href="http://www.domain.com/css/layout.min.css" rel="stylesheet">
     
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -27,7 +27,7 @@
 
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="http://www.mafavis.pt/js/bootstrap.min.js"></script>
-    <script src="http://www.mafavis.pt/js/layout.min.js"></script>
+    <script src="http://www.domain.com/js/bootstrap.min.js"></script>
+    <script src="http://www.domain.com/js/layout.min.js"></script>
   </body>
 </html>

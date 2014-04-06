@@ -15,8 +15,8 @@
 	$corrent_url = $_SERVER['QUERY_STRING'];
 	
 	/// status
-	$status_online  = '';
-	$status_offline = '';
+	$status_online  = '<div class="label label-success">Online</div>';
+	$status_offline = '<div class="label label-danger">Offline</div>';
 	
 /*-------------------------------------*/
 
