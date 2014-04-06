@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>error 500</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="geo.placename" content="">
+    <meta name="geo.position" content="4">
+    <meta name="geo.region" content="">
+    <meta name="ICBM" content="">
+    
+    <!-- CSS -->
+    <link rel="shortcut icon" type="image/gif" href="http://www.mafavis.pt/assets/icons/animated_favicon.gif"></link>
+    <link href="http://www.mafavis.pt/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://www.mafavis.pt/css/plugins/font-awesome.min.css" rel="stylesheet">
+    <link href="http://www.mafavis.pt/css/layout.min.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <h1>error 500</h1>
+		<h3>Internal Server Error</h3>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="http://www.mafavis.pt/js/bootstrap.min.js"></script>
+    <script src="http://www.mafavis.pt/js/layout.min.js"></script>
+
+  </body>
+</html>
