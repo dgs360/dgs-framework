@@ -1,47 +1,78 @@
 dgs-framework
 =============
 
-/*
- * SEO links
- */
 
-[.htaccess file]
-Options +FollowSymlinks
-RewriteEngine On
-RewriteCond %{REQUEST_URI} !^/index.php
-RewriteCond %{REQUEST_URI} !^/$
-RewriteRule ^([^\.]+)$ %{DOCUMENT_ROOT}/index.php?page=$1 [NC,L]
+<h3>SEO links</h3>
 
-[Database]
+<p>
+<h4>[.htaccess file]</h4><br>
+<code style="padding:10px">
+Options +FollowSymlinks<br>
+RewriteEngine On<br>
+RewriteCond %{REQUEST_URI} !^/index.php<br>
+RewriteCond %{REQUEST_URI} !^/$<br>
+RewriteRule ^([^\.]+)$ %{DOCUMENT_ROOT}/index.php?page=$1 [NC,L]<br>
+</code>
+</p>
+<br>
+<br>
 
-Table name: 'table_pages'
-===========================================================================
-page_id    page_status    page_seo_link   page_name        page_content
-   1            1           home            Home           <html content>
-   2            1           about-us        About Us       <html content>
-   ...          ...         ...             ...            ...
-===========================================================================
+<h4>[Database]</h4>
+<b>Table name:</b> 'table_pages'<br>
+<table width="100" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<th scope="row">page_id</th>
+		<td>page_status</td>
+		<td>page_seo_link</td>
+		<td>page_name</td>
+		<td>page_content</td>
+	</tr>
+	<tr>
+		<th scope="row">1</th>
+		<td>1</td>
+		<td>home</td>
+		<td>Home</td>
+		<td>html content</td>
+	</tr>
+	<tr>
+		<th scope="row">2</th>
+		<td>1</td>
+		<td>about-us</td>
+		<td>About Us</td>
+		<td>html content</td>
+	</tr>
+	<tr>
+		<th scope="row">...</th>
+		<td>...</td>
+		<td>...</td>
+		<td>...</td>
+		<td>...</td>
+	</tr>
+</table>
+<br>
+<br>
 
-[SQL]
 
-/* Get Page */
-if (isset($_GET['page'])) {
-    $getpage = $_GET['page'];
-}
-mysql_select_db($database_con_db, $con_db);
-$query_getPage = sprintf("SELECT * FROM web_pages WHERE page_seo_link = %s", GetSQLValueString($getpage, "text"));
-$getPage = mysql_query($query_getPage, $con_db) or die(mysql_error());
-$row_getPage = mysql_fetch_assoc($getPage);
-$totalRows_getPage = mysql_num_rows($getPage);
+<h4>[SQL]</h4>
+<code style="padding:10px">
+/* Get Page */<br>
+if (isset($_GET['page'])) {<br>
+    $getpage = $_GET['page'];<br>
+}<br><br>
+mysql_select_db($database_con_db, $con_db);<br>
+$query_getPage = sprintf("SELECT * FROM web_pages WHERE page_seo_link = %s", GetSQLValueString($getpage, "text"));<br>
+$getPage = mysql_query($query_getPage, $con_db) or die(mysql_error());<br>
+$row_getPage = mysql_fetch_assoc($getPage);<br>
+$totalRows_getPage = mysql_num_rows($getPage);<br>
+</code>
+<br>
+<br>
 
-[php]
+<h4>[php]</h4>
 
-<a href="<?=$row_getPage['menu_seo_link'];?>"><?=$row_getPage['menu_name'];?></a>
+"<"a href="<?=$row_getPage['menu_seo_link'];?>"><?=$row_getPage['menu_name'];?></a>;
 
 
-/*
- * Ttitle
- */
 
 
 
