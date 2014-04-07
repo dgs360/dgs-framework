@@ -70,7 +70,7 @@ $totalRows_getPage = mysql_num_rows($getPage);<br>
 
 <h4>[php]</h4>
 
-< a href="<?=$row_getPage['menu_seo_link'];?>"><?=$row_getPage['menu_name'];?>< /a>
+< a href="<?=$row_getPage['page_seo_link'];?>"><?=$row_getPage['page_name'];?>< /a>
 
 
 
