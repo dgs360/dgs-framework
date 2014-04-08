@@ -8,5 +8,6 @@ CMS Framework basad in:
 - jquery
 
 Plugins
+- http://labs.rampinteractive.co.uk/touchSwipe/demos/
 - https://mixitup.kunkalabs.com/
 
