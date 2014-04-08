@@ -15,4 +15,5 @@ Plugins
 [JS]
 - http://labs.rampinteractive.co.uk/touchSwipe/demos/
 - https://mixitup.kunkalabs.com/
+- http://jquerypicture.com/
 
