@@ -1,4 +1,4 @@
-dgs-framework
+DGS-framework
 =============
 
 <b>CMS Framework basad in:</b>
