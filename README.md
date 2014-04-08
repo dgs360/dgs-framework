@@ -16,4 +16,5 @@ Plugins
 - http://labs.rampinteractive.co.uk/touchSwipe/demos/
 - https://mixitup.kunkalabs.com/
 - http://jquerypicture.com/
+- http://www.bootstrap-switch.org/
 
