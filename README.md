@@ -1,7 +1,7 @@
 dgs-framework
 =============
 
-Framework basad in:
+Framework CMS basad in:
 - php
 - mysql
 - bootstrap 3 (sass)
