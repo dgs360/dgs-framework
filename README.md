@@ -10,7 +10,7 @@ CMS Framework basad in:
 Plugins
 
 [css]
-- http://
+- http://fontawesome.io/
 
 [JS]
 - http://labs.rampinteractive.co.uk/touchSwipe/demos/

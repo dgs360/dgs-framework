@@ -22,7 +22,7 @@
 		<link rel="shortcut icon" type="image/png" href="<?=$path_icons;?>icon-logo.png">
 
 		<!-- css -->
-		<link href="css/plugins/font-awesome.min.css" rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 		<link href="css/layout.min.css" rel="stylesheet">
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -72,7 +72,7 @@
 
 		<!-- jQuery --> 
 		<script src="js/bootstrap.min.js"></script> 
-		<script src="js/mafavis.min.js"></script> 
+		<script src="js/layout.min.js"></script> 
 		<script src="js/plugins/jquery.touchSwipe.min.js"></script> 
 		<script src="js/plugins/jquery.mixitup.min.js"></script> 
 		<script src="js/plugins/jquery.picture.min.js"></script>
