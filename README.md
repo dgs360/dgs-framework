@@ -1,13 +1,13 @@
 dgs-framework
 =============
 
-CMS Framework basad in:
+<b>CMS Framework basad in:</b>
 - php
 - mysql
 - bootstrap 3 (sass)
 - jquery
 
-Plugins
+<b>Plugins</b>
 
 [css]
 - http://fontawesome.io/
