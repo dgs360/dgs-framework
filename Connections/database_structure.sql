@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 09-Abr-2014 às 17:54
+-- Generation Time: 09-Abr-2014 às 18:22
 -- Versão do servidor: 5.6.16
 -- PHP Version: 5.5.9
 
@@ -154,6 +154,7 @@ CREATE TABLE IF NOT EXISTS `ws_pages` (
 
 CREATE TABLE IF NOT EXISTS `ws_portfolio` (
   `portfolio_id` int(11) NOT NULL AUTO_INCREMENT,
+  `portfolio_category_id` int(11) NOT NULL,
   `portfolio_status` tinyint(1) NOT NULL DEFAULT '1' COMMENT 'visible / hidden',
   `portfolio_seo_link` varchar(100) DEFAULT NULL,
   `portfolio_ref` varchar(0) DEFAULT NULL,
@@ -162,7 +163,8 @@ CREATE TABLE IF NOT EXISTS `ws_portfolio` (
   `portfolio_thumbnail` varchar(100) DEFAULT NULL,
   `portfolio_addDate` datetime DEFAULT NULL,
   `portfolio_updateDate` datetime DEFAULT NULL,
-  PRIMARY KEY (`portfolio_id`)
+  PRIMARY KEY (`portfolio_id`),
+  KEY `fk_ws_portfolio_ws_portfolio_category1_idx` (`portfolio_category_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -190,6 +192,7 @@ CREATE TABLE IF NOT EXISTS `ws_portfolio_category` (
 
 CREATE TABLE IF NOT EXISTS `ws_portfolio_images` (
   `portfolio_image_id` int(11) NOT NULL AUTO_INCREMENT,
+  `portfolio_id` int(11) NOT NULL,
   `portfolio_image_status` tinyint(1) NOT NULL DEFAULT '1' COMMENT 'visible / hidden',
   `portfolio_image_name` varchar(100) DEFAULT NULL,
   `portfolio_image_desc` varchar(300) DEFAULT NULL,
@@ -199,7 +202,8 @@ CREATE TABLE IF NOT EXISTS `ws_portfolio_images` (
   `portfolio_image_S` varchar(100) DEFAULT NULL,
   `portfolio_image_addDate` datetime DEFAULT NULL,
   `portfolio_image_updateDate` datetime DEFAULT NULL,
-  PRIMARY KEY (`portfolio_image_id`)
+  PRIMARY KEY (`portfolio_image_id`),
+  KEY `fk_ws_portfolio_images_ws_portfolio_idx` (`portfolio_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -221,10 +225,26 @@ CREATE TABLE IF NOT EXISTS `ws_setup` (
 --
 
 INSERT INTO `ws_setup` (`setup_id`, `setup_status`, `setup_name`, `setup_content`) VALUES
-(1, 1, 'site name', 'WebSite Name'),
-(2, 1, 'meta', '<meta charset="utf-8">\r\n<meta http-equiv="X-UA-Compatible" content="IE=edge">\r\n<meta name="viewport" content="width=device-width, initial-scale=1">'),
-(3, 1, 'css links', '<!-- CSS -->\r\n<link href="css/bootstrap.min.css" rel="stylesheet">'),
-(4, 1, 'js links', '<!-- JS -->\r\n<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>\r\n<script src="js/bootstrap.min.js"></script>');
+(1, 1, 'sitename', 'WebSite Name'),
+(2, 1, 'meta', '<meta name="keywords" content="">\r\n<meta name="description" content="">\r\n<meta name="robots" content="index, follow">\r\n<meta name="copyright" content="DGS Fotografia e Multimédia">\n\r\n<meta name="author" content="DGS Fotografia e Multimédia">\r\n<meta name="viewport" content="width=device-width, initial-scale=1.0">\r\n<meta http-equiv="content-type" content="text/html; charset=UTF-8">'),
+(3, 1, 'css links', '<link rel="shortcut icon" type="image/png" href="<?=$path_icons;?>icon-logo.png">\r\n<!-- css -->\r\n<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">\n	\r\n<link href="css/layout.min.css" rel="stylesheet">\n\n	\r\n<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->\n		\r\n\r\n<!-- WARNING: Respond.js doesn''t work if you view the page via file:// -->\n		\r\n<!--[if lt IE 9]>\n		      \r\n<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>\r\n<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>\r\n<![endif]-->'),
+(4, 1, 'js links', '<!-- jQuery -->\r\n<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>\r\n<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>\r\n<script src="js/bootstrap.min.js"></script>\r\n<script src="js/layout.min.js"></script>\r\n<script src="js/plugins/jquery.touchSwipe.min.js"></script>\r\n<script src="js/plugins/jquery.mixitup.min.js"></script>\r\n<script src="js/plugins/jquery.picture.min.js"></script>');
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Limitadores para a tabela `ws_portfolio`
+--
+ALTER TABLE `ws_portfolio`
+  ADD CONSTRAINT `fk_ws_portfolio_ws_portfolio_category1` FOREIGN KEY (`portfolio_category_id`) REFERENCES `ws_portfolio_category` (`portfolio_category_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Limitadores para a tabela `ws_portfolio_images`
+--
+ALTER TABLE `ws_portfolio_images`
+  ADD CONSTRAINT `fk_ws_portfolio_images_ws_portfolio` FOREIGN KEY (`portfolio_id`) REFERENCES `ws_portfolio` (`portfolio_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
